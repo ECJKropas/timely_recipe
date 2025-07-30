@@ -944,6 +944,20 @@ class GameManager {
             });
         }
         
+        // 厨房区域显示/隐藏切换
+        const toggleKitchenBtn = document.getElementById('toggle-kitchen-btn');
+        const gameMain = document.querySelector('.game-main');
+        
+        if (toggleKitchenBtn && gameMain) {
+            toggleKitchenBtn.addEventListener('click', () => {
+                gameMain.classList.toggle('kitchen-hidden');
+                // 更新按钮图标
+                const isHidden = gameMain.classList.contains('kitchen-hidden');
+                toggleKitchenBtn.textContent = isHidden ? '👁️‍🗨️' : '👁️';
+                toggleKitchenBtn.title = isHidden ? '显示厨房背景' : '隐藏厨房背景';
+            });
+        }
+
         // 防止页面刷新时丢失拖拽状态
         window.addEventListener('beforeunload', () => {
             if (this.timer) {
@@ -1070,6 +1084,11 @@ class GameManager {
         if (this.cookingTimers[toolName]) {
             clearInterval(this.cookingTimers[toolName]);
             delete this.cookingTimers[toolName];
+        }
+
+        // 清理烹饪进度状态
+        if (this.cookingProgress[toolName]) {
+            delete this.cookingProgress[toolName];
         }
 
         const toolContents = this.state.toolContents[toolName];
@@ -1348,19 +1367,27 @@ class GameManager {
     dumpToolIngredients(toolName) {
         if (!this.cookingProgress[toolName] || !this.cookingProgress[toolName].isCooking) return;
 
-        const progress = this.cookingProgress[toolName];
-        const progressPercent = (progress.remainingTime / progress.totalTime) * 100;
-        let isCooked;
-        if (progressPercent >= 30) {
-            isCooked = 2; // 生的
-        } else if (progressPercent < 30 && progressPercent > 0) {
-            isCooked = 1; // 烤熟
+        const toolData = this.state.allItemsData.tools.find(t => t.name === toolName);
+        const isNonHeatingTool = toolData && toolData.fire === -1;
+        
+        if (isNonHeatingTool) {
+            // 对于非热源厨具，直接返回生的食材
+            this.finishToolCooking(toolName, 2);
         } else {
-            isCooked = 0; // 烤焦
+            // 对于正常厨具，根据进度判断状态
+            const progress = this.cookingProgress[toolName];
+            const progressPercent = (progress.remainingTime / progress.totalTime) * 100;
+            let isCooked;
+            if (progressPercent >= 30) {
+                isCooked = 2; // 生的
+            } else if (progressPercent < 30 && progressPercent > 0) {
+                isCooked = 1; // 烤熟
+            } else {
+                isCooked = 0; // 烤焦
+            }
+            this.finishToolCooking(toolName, isCooked);
         }
-
-        this.finishToolCooking(toolName, isCooked);
-    }
+ }
 
     showError(message) {
         const errorDiv = document.createElement('div');

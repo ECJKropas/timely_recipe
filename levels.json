@@ -14,7 +14,8 @@
         "picture":"dongbei.jpg",
         "required_health": 200,
         "stages":[
-            "dongbei1"
+            "dongbei1",
+            "dongbei2"
         ]
     },
     "粤馔精工":{

@@ -6,7 +6,11 @@
 
 body {
     font-family: 'Microsoft YaHei', Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-image: url('../assets/kitchenbg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
     color: #333;
 }

@@ -42,6 +42,16 @@
             "character":"jessie",
             "name":"Jessie",
             "content":"将鸡蛋卡片拖动进平底锅中,即可开始烤制"
+        },
+        {
+            "character":"jessie",
+            "name":"Jessie",
+            "content":"当厨具下方的剩余时间小于30%的原有时间时,即可停止烤制,倒出食物"
+        },
+        {
+            "character":"jessie",
+            "name":"Jessie",
+            "content":"如果时间结束还没有倒出食物,则食物会烧焦"
         }
     ],
     "args":[],

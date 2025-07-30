@@ -23,6 +23,9 @@
                 <button class="recipe-btn" id="recipe-btn" title="查看食谱">
                     📖 食谱
                 </button>
+                <button class="toggle-kitchen-btn" id="toggle-kitchen-btn" title="隐藏/显示厨房背景">
+                    👁️
+                </button>
                 <div class="timer">
                     <span id="timer-display">--:--</span>
                 </div>
@@ -32,7 +35,7 @@
         <!-- 主游戏区域 -->
         <main class="game-main">
             <!-- 左侧厨房背景 -->
-            <section class="kitchen-area">
+            <section class="kitchen-area" id="kitchen-area">
                 <img src="assets/kitchenbg.png" alt="厨房背景" class="kitchen-bg">
             </section>
 
@@ -112,8 +115,8 @@
         </div>
     </div>
 
-    <script src="../node_modules/confetti-js/dist/index.min.js"></script>
-    <script src="../node_modules/typed.js/dist/typed.umd.js"></script>
+    <script src="node_modules/confetti-js/dist/index.min.js"></script>
+    <script src="node_modules/typed.js/dist/typed.umd.js"></script>
     <script src="main_scene.js"></script>
 </body>
 </html>

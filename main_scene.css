@@ -40,7 +40,7 @@ body {
     gap: 15px;
 }
 
-.recipe-btn {
+.recipe-btn, .toggle-kitchen-btn {
     background: rgba(255,255,255,0.2);
     border: 2px solid rgba(255,255,255,0.3);
     color: white;
@@ -54,10 +54,15 @@ body {
     gap: 5px;
 }
 
-.recipe-btn:hover {
+.recipe-btn:hover, .toggle-kitchen-btn:hover {
     background: rgba(255,255,255,0.3);
     border-color: rgba(255,255,255,0.5);
     transform: translateY(-2px);
+}
+
+.toggle-kitchen-btn {
+    padding: 8px 12px;
+    font-size: 16px;
 }
 
 .level-info h1 {
@@ -122,6 +127,20 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+/* 厨房区域隐藏时的样式 */
+.game-main.kitchen-hidden .kitchen-area {
+    display: none;
+}
+
+.game-main.kitchen-hidden .game-interface {
+    width: 100%;
+    border-left: none;
+}
+
+.game-main.kitchen-hidden .tools-grid {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 /* 右侧操作区域 */
@@ -200,6 +219,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    transition: all 0.3s ease;
 }
 
 .tool-item {

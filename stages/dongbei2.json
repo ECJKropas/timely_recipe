@@ -1,0 +1,85 @@
+{
+    "stageId": 2002,
+    "stageName": "小鸡炖蘑菇",
+    "description": "欢迎来到东北菜的精髓第二关！今天我们要学习制作最地道的东北家常菜——小鸡炖蘑菇。",
+    "goals": [
+        "学会小鸡炖蘑菇的经典做法",
+        "掌握东北炖菜的火候技巧",
+        "成功制作一份香浓的小鸡炖蘑菇",
+        "在规定时间内完成烹饪"
+    ],
+    "ingredients": [
+        {
+            "name": "鸡肉",
+            "quantity": 500
+        },
+        {
+            "name": "蘑菇",
+            "quantity": 200
+        },
+        {
+            "name": "土豆",
+            "quantity": 300
+        },
+        {
+            "name": "洋葱",
+            "quantity": 100
+        },
+        {
+            "name": "生姜",
+            "quantity": "适量"
+        },
+        {
+            "name": "大蒜",
+            "quantity": "适量"
+        },
+        {
+            "name": "葱",
+            "quantity": "适量"
+        },
+        {
+            "name": "盐",
+            "quantity": "适量"
+        },
+        {
+            "name": "酱油",
+            "quantity": "适量"
+        },
+        {
+            "name": "料酒",
+            "quantity": "适量"
+        },
+        {
+            "name": "食用油",
+            "quantity": "适量"
+        }
+    ],
+    "tools": [
+        "砂锅",
+        "铲子",
+        "菜刀",
+        "菜板"
+    ],
+    "timeLimit": 400,
+    "targets": [
+        "小鸡炖蘑菇"
+    ],
+    "reward": {
+        "coins": 250,
+        "recipeBook": ["小鸡炖蘑菇"]
+    },
+    "predialog": [
+        {
+            "character": "jessie",
+            "name": "Jessie",
+            "content": "欢迎来到东北菜的第二关！今天我们要学习制作最经典的东北家常菜——小鸡炖蘑菇。"
+        },
+        {
+            "character": "jessie",
+            "name": "Jessie",
+            "content": "小鸡炖蘑菇是东北人冬天最爱的炖菜，鸡肉鲜嫩，蘑菇香浓，汤汁浓郁。让我们一起学习这道地道的东北美味吧！"
+        }
+    ],
+    "args": [],
+    "kwargs": {}
+}
