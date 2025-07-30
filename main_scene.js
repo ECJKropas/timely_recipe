@@ -580,37 +580,40 @@ class GameManager {
                 dialogLayer.style.display = 'flex';
 
                 // 清除之前的打字机实例
-                if (typedInstance && typeof Typed !== 'undefined') {
+                if (typedInstance) {
                     typedInstance.destroy();
                 }
 
                 // 设置打字机效果
-        isTyping = true;
-        dialogContent.textContent = '';
-        
-        // 检查Typed库是否可用
-        if (typeof Typed !== 'undefined') {
-            typedInstance = new Typed(dialogContent, {
-                strings: [dialog.content],
-                typeSpeed: 50,
-                backSpeed: 0,
-                loop: false,
-                showCursor: false,
-                onComplete: () => {
+                isTyping = true;
+                dialogContent.textContent = '';
+                
+                // 检查Typed是否可用
+                const TypedConstructor = window.Typed || Typed;
+                if (typeof TypedConstructor === 'undefined') {
+                    // 如果Typed.js不可用，直接显示文本
+                    dialogContent.textContent = dialog.content;
                     isTyping = false;
+                } else {
+                    typedInstance = new TypedConstructor(dialogContent, {
+                        strings: [dialog.content],
+                        typeSpeed: 50,
+                        backSpeed: 0,
+                        loop: false,
+                        showCursor: false,
+                        onComplete: () => {
+                            isTyping = false;
+                        }
+                    });
                 }
-            });
-        } else {
-            // 降级方案：直接显示文本
-            dialogContent.textContent = dialog.content;
-            isTyping = false;
-        }
             };
 
             const nextDialog = () => {
                 // 如果正在打字，直接显示完整文本
-                if (isTyping && typedInstance && typeof Typed !== 'undefined') {
-                    typedInstance.stop();
+                if (isTyping && typedInstance) {
+                    if (typeof typedInstance.stop === 'function') {
+                        typedInstance.stop();
+                    }
                     dialogContent.textContent = stage.predialog[currentDialogIndex].content;
                     isTyping = false;
                     return;
@@ -636,7 +639,7 @@ class GameManager {
             const cleanup = () => {
                 dialogLayer.removeEventListener('click', nextDialog);
                 document.removeEventListener('keydown', handleKeyPress);
-                if (typedInstance && typeof Typed !== 'undefined') {
+                if (typedInstance && typeof typedInstance.destroy === 'function') {
                     typedInstance.destroy();
                 }
             };
@@ -805,7 +808,7 @@ class GameManager {
             canvas.style.zIndex = '9999';
             document.body.appendChild(canvas);
 
-            // 检查ConfettiGenerator库是否可用
+            // 检查ConfettiGenerator是否可用
             if (typeof ConfettiGenerator !== 'undefined') {
                 // 初始化confetti
                 const confetti = new ConfettiGenerator({
@@ -824,7 +827,7 @@ class GameManager {
                     document.body.removeChild(canvas);
                 }, 3000);
             } else {
-                // 降级方案：不显示纸屑，直接移除canvas
+                // 如果ConfettiGenerator不可用，直接移除画布
                 setTimeout(() => {
                     document.body.removeChild(canvas);
                 }, 100);
