@@ -1013,7 +1013,7 @@ class GameManager {
                 const ingredientData = this.state.allItemsData.ingredients.find(i => i.name === item.name);
                 return ingredientData ? ingredientData.heating : 30;
             }));
-            cookingTime = Math.round((minHeating / toolData.fire)); // 使用最小heating值，更合理
+            cookingTime = Math.max(Math.round((minHeating / toolData.fire)), 6); // 使用最小heating值，确保最小6秒
         }
         
         this.cookingProgress[toolName] = {
