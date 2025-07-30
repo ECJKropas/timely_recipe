@@ -1,0 +1,88 @@
+{
+    "stageId": 2001,
+    "stageName": "锅包肉",
+    "description": "欢迎开始你的东北之旅！在这一关中，你将学习如何制作正宗的东北锅包肉。",
+    "goals": [
+        "学会制作锅包肉的关键步骤",
+        "成功制作一份地道的锅包肉",
+        "在规定时间内完成烹饪"
+    ],
+    "ingredients": [
+        {
+            "name": "猪里脊",
+            "quantity": 5
+        },
+        {
+            "name": "盐",
+            "quantity": "足量"
+        },
+        {
+            "name": "食用油",
+            "quantity": "足量"
+        },
+        {
+            "name": "鸡蛋",
+            "quantity": 2
+        },
+        {
+            "name": "淀粉",
+            "quantity": "足量"
+        },
+        {
+            "name": "糖",
+            "quantity": "足量"
+        },
+        {
+            "name": "醋",
+            "quantity": "足量"
+        },
+        {
+            "name": "酱油",
+            "quantity": "足量"
+        },
+        {
+            "name": "料酒",
+            "quantity": "足量"
+        },
+        {
+            "name": "大蒜",
+            "quantity": "适量"
+        },
+        {
+            "name": "生姜",
+            "quantity": "适量"
+        },
+        {
+            "name": "胡椒粉",
+            "quantity": "适量"
+        }
+    ],
+    "tools": [
+        "平底锅",
+        "碗",
+        "铲子",
+        "菜板"
+    ],
+    "timeLimit": 300,
+    "targets": [
+        "锅包肉"
+    ],
+    "reward": {
+        "coins": 200,
+        "recipeBook": ["腌制里脊", "上糊的腌制里脊", "炸过的上糊的腌制里脊", "锅包肉酱料", "锅包肉"]
+    },
+    "predialog": [
+        {
+            "character": "jessie",
+            "name": "Jessie",
+            "content": "欢迎来到东北菜的精髓关卡！今天我们要学习制作最经典的东北菜——锅包肉。"
+        },
+        {
+            "character": "jessie",
+            "name": "Jessie",
+            "content": "锅包肉外酥内嫩，酸甜可口，是东北菜的代表作。让我们一步步来学习制作吧！"
+        }
+    ],
+    "args": [],
+    "kwargs": {}
+}

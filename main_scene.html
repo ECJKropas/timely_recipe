@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时光菜谱 - 主游戏场景</title>
+    <link rel="stylesheet" href="main_scene.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- 顶部信息栏 -->
+        <header class="game-header">
+            <div class="level-info">
+                <h1 id="level-name">加载中...</h1>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <span class="progress-text" id="progress-text">0%</span>
+                </div>
+            </div>
+            <div class="header-controls">
+                <button class="recipe-btn" id="recipe-btn" title="查看食谱">
+                    📖 食谱
+                </button>
+                <div class="timer">
+                    <span id="timer-display">--:--</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主游戏区域 -->
+        <main class="game-main">
+            <!-- 左侧厨房背景 -->
+            <section class="kitchen-area">
+                <img src="assets/kitchenbg.png" alt="厨房背景" class="kitchen-bg">
+            </section>
+
+            <!-- 右侧操作区域 -->
+            <section class="game-interface">
+                <!-- 食材区域 -->
+                <div class="ingredients-section">
+                    <h2>🥬 可用食材</h2>
+                    <div class="ingredients-grid" id="ingredients-grid">
+                        <!-- 动态生成食材卡片 -->
+                    </div>
+                </div>
+
+                <!-- 厨具区域 -->
+                <div class="tools-section">
+                    <h2>🍳 厨具</h2>
+                    <div class="tools-grid" id="tools-grid">
+                        <!-- 动态生成厨具 -->
+                    </div>
+                </div>
+
+                <!-- 操作区域 -->
+                <div class="cooking-area">
+                    <h2>🔥 烹饪区</h2>
+                    <div class="cooking-controls">
+                        <button id="start-all-cooking-btn" class="start-cooking-btn">开始全部烹饪</button>
+                    </div>
+                    <div class="cooking-surface" id="cooking-surface" style="display: none;">
+                        <p class="drop-hint">将食材拖拽到厨具中开始烹饪</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 悬停提示 -->
+    <div class="tooltip" id="tooltip" style="display: none;">
+        <div class="tooltip-content"></div>
+    </div>
+
+    <!-- 预对话层 - 显示在左侧厨房区域下方 -->
+    <div class="predialog-layer" id="predialog-layer" style="display: none;">
+        <div class="character-photo-full">
+            <img id="character-image-full" src="" alt="角色照片">
+        </div>
+        <div class="dialog-box-bottom">
+            <div class="character-name-bottom" id="character-name-bottom">角色名</div>
+            <div class="dialog-content-bottom" id="dialog-content-bottom">对话内容</div>
+        </div>
+    </div>
+
+    <!-- 关卡目标模态框 -->
+    <div class="goals-modal" id="goals-modal" style="display: none;">
+        <div class="goals-modal-content">
+            <h2>🎯 关卡目标</h2>
+            <div class="goals-list" id="goals-list">
+                <!-- 动态生成目标列表 -->
+            </div>
+            <div class="goals-time-limit">
+                <span>⏱️ 时间限制：</span>
+                <span id="goals-time-display">--:--</span>
+            </div>
+            <button class="goals-start-btn" id="goals-start-btn">开始游戏</button>
+        </div>
+    </div>
+
+    <!-- 食谱模态框 -->
+    <div class="recipe-modal" id="recipe-modal" style="display: none;">
+        <div class="recipe-modal-content">
+            <div class="recipe-modal-header">
+                <h2>📖 已解锁食谱</h2>
+                <button class="close-btn" id="close-recipe-modal">&times;</button>
+            </div>
+            <div class="recipe-list" id="recipe-list">
+                <!-- 动态生成食谱卡片 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/confetti-js/dist/index.min.js"></script>
+    <script src="node_modules/typed.js/dist/typed.umd.js"></script>
+    <script src="main_scene.js"></script>
+</body>
+</html>

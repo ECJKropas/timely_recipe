@@ -1,0 +1,80 @@
+{
+    "stageId": 1035,
+    "stageName": "香酥鸭",
+    "description": "在这一关中，你将综合运用之前所有经验。",
+    "goals": [
+        "成功制作一份简单的香酥鸭",
+        "在规定时间内完成烹饪"
+    ],
+    "ingredients": [
+        {
+            "name": "鸭腿",
+            "quantity": 5
+        },
+        {
+            "name": "盐",
+            "quantity": "足量"
+        },
+        {
+            "name": "食用油",
+            "quantity": "足量"
+        },
+        {
+            "name": "山奈",
+            "quantity": "适量"
+        },
+        {
+            "name": "栀子黄",
+            "quantity": "适量"
+        },
+        {
+            "name": "八角",
+            "quantity": "适量"
+        },
+        {
+            "name": "味精",
+            "quantity": "适量"
+        },
+        {
+            "name": "香叶",
+            "quantity": "适量"
+        },
+        {
+            "name": "老抽",
+            "quantity": "适量"
+        },
+        {
+            "name": "蜂蜜",
+            "quantity": "适量"
+        }
+    ],
+    "tools": [
+        "平底锅",
+        "研磨机",
+        "菜板",
+        "碗",
+        "蒸笼"
+    ],
+    "timeLimit": 600,
+    "targets":[
+        "香酥鸭"
+    ],
+    "reward": {
+        "coins": 50,
+        "recipeBook": ["盐焗鸡粉", "西红柿炒鸡蛋", "锅包肉酱料","锅包肉"]
+    },
+    "predialog":[
+        {
+            "character":"jessie",
+            "name":"Jessie",
+            "content":"欢迎来到时光菜谱的第四关！"
+        },
+        {
+            "character":"jessie",
+            "name":"Jessie",
+            "content":"在这一关中,你需要自己摸索出制作香酥鸭的方法。"
+        }
+    ],
+    "args":[],
+    "kwargs":{}
+}

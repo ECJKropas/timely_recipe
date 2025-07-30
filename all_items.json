@@ -1,0 +1,597 @@
+{
+    "ingredients":[
+        {
+            "name":"鸡蛋",
+            "id":"egg",
+            "nutrition":200,
+            "price":10,
+            "size":10,
+            "heating":30,
+            "emoji":"🥚"
+        },
+        {
+            "name":"西红柿",
+            "id":"tomato",
+            "nutrition":80,
+            "price":8,
+            "size":35,
+            "heating":20,
+            "emoji":"🍅"
+        },
+        {
+            "name":"土豆",
+            "id":"potato",
+            "nutrition":120,
+            "price":6,
+            "size":20,
+            "heating":40,
+            "emoji":"🥔"
+        },
+        {
+            "name":"牛肉",
+            "id":"beef",
+            "nutrition":350,
+            "price":80,
+            "size":50,
+            "heating":60,
+            "emoji":"🥩"
+        },
+        {
+            "name":"猪里脊",
+            "id":"pork_loin",
+            "nutrition":650,
+            "price":80,
+            "size":50,
+            "heating":60,
+            "emoji":"🐷"
+        },
+        {
+            "name":"猪五花",
+            "id":"pork_bacon",
+            "nutrition":650,
+            "price":75,
+            "size":50,
+            "heating":60,
+            "emoji":"🐷"
+        },
+        {
+            "name":"鲫鱼",
+            "id":"crucian",
+            "nutrition":350,
+            "price":80,
+            "size":50,
+            "heating":60,
+            "emoji":"🐟"
+        },
+        {
+            "name":"清蒸鱼",
+            "id":"plain_steamed_fish",
+            "nutrition":3500,
+            "price":80,
+            "size":500,
+            "heating":60,
+            "emoji":"🐟"
+        },
+        {
+            "name":"煎蛋",
+            "id":"fry_egg",
+            "nutrition":390,
+            "price":80,
+            "size":100,
+            "heating":60,
+            "emoji":"🍳"
+        },
+        {
+            "name":"鸭腿",
+            "id":"duck_leg",
+            "nutrition":390,
+            "price":80,
+            "size":100,
+            "heating":60,
+            "emoji":"🦆"
+        },
+        {
+            "name":"大蒜",
+            "id":"garlic",
+            "nutrition":30,
+            "price":5,
+            "size":5,
+            "heating":10,
+            "emoji":"🧄"
+        },
+        {
+            "name":"生姜",
+            "id":"ginger",
+            "nutrition":20,
+            "price":8,
+            "size":10,
+            "heating":15,
+            "emoji":"🫚"
+        },
+        {
+            "name":"淀粉",
+            "id":"starch",
+            "nutrition":100,
+            "price":15,
+            "size":20,
+            "heating":5,
+            "emoji":"🌾"
+        },
+        {
+            "name":"洋葱",
+            "id":"onion",
+            "nutrition":40,
+            "price":8,
+            "size":25,
+            "heating":15,
+            "emoji":"🧅"
+        },
+        {
+            "name":"葱",
+            "id":"scallion",
+            "nutrition":10,
+            "price":3,
+            "size":5,
+            "heating":5,
+            "emoji":"🌱"
+        },
+        {
+            "name":"胡萝卜",
+            "id":"carrot",
+            "nutrition":50,
+            "price":6,
+            "size":30,
+            "heating":25,
+            "emoji":"🥕"
+        },
+        {
+            "name":"青椒",
+            "id":"green_pepper",
+            "nutrition":30,
+            "price":8,
+            "size":20,
+            "heating":15,
+            "emoji":"🫑"
+        },
+        {
+            "name":"鸡肉",
+            "id":"chicken",
+            "nutrition":300,
+            "price":60,
+            "size":50,
+            "heating":50,
+            "emoji":"🐔"
+        },
+        {
+            "name":"虾",
+            "id":"shrimp",
+            "nutrition":200,
+            "price":70,
+            "size":30,
+            "heating":30,
+            "emoji":"🦐"
+        },
+        {
+            "name":"米饭",
+            "id":"rice",
+            "nutrition":250,
+            "price":5,
+            "size":40,
+            "heating":20,
+            "emoji":"🍚"
+        },
+        {
+            "name":"面条",
+            "id":"noodles",
+            "nutrition":300,
+            "price":8,
+            "size":50,
+            "heating":15,
+            "emoji":"🍜"
+        },
+        {
+            "name":"豆腐",
+            "id":"tofu",
+            "nutrition":150,
+            "price":15,
+            "size":40,
+            "heating":20,
+            "emoji":"🧊"
+        },
+        {
+            "name":"蘑菇",
+            "id":"mushroom",
+            "nutrition":50,
+            "price":20,
+            "size":25,
+            "heating":15,
+            "emoji":"🍄"
+        },
+        {
+            "name":"紫菜",
+            "id":"seaweed",
+            "nutrition":20,
+            "price":15,
+            "size":5,
+            "heating":5,
+            "emoji":"🌿"
+        },
+        {
+            "name":"黄瓜",
+            "id":"cucumber",
+            "nutrition":30,
+            "price":8,
+            "size":30,
+            "heating":10,
+            "emoji":"🥒"
+        },
+        {
+            "name":"米饭(煮熟)",
+            "id":"cooked_rice",
+            "nutrition":250,
+            "price":5,
+            "size":40,
+            "heating":0,
+            "emoji":"🍚"
+        },
+        {
+            "name":"鸡蛋(烤熟)",
+            "id":"cooked_egg",
+            "nutrition":200,
+            "price":10,
+            "size":10,
+            "heating":0,
+            "emoji":"🍳"
+        },
+        {
+            "name":"西红柿(烤熟)",
+            "id":"cooked_tomato",
+            "nutrition":80,
+            "price":8,
+            "size":35,
+            "heating":0,
+            "emoji":"🍅"
+        },
+        {
+            "name":"土豆(烤熟)",
+            "id":"cooked_potato",
+            "nutrition":120,
+            "price":6,
+            "size":20,
+            "heating":0,
+            "emoji":"🥔"
+        },
+        {
+            "name":"牛肉(烤熟)",
+            "id":"cooked_beef",
+            "nutrition":350,
+            "price":80,
+            "size":50,
+            "heating":0,
+            "emoji":"🥩"
+        },
+        {
+            "name":"鲫鱼(烤熟)",
+            "id":"cooked_crucian",
+            "nutrition":350,
+            "price":80,
+            "size":50,
+            "heating":0,
+            "emoji":"🐟"
+        },
+        {
+            "name":"猪肉(烤熟)",
+            "id":"cooked_pork",
+            "nutrition":650,
+            "price":80,
+            "size":50,
+            "heating":0,
+            "emoji":"🐷"
+        },
+        {
+            "name":"鸡肉(烤熟)",
+            "id":"cooked_chicken",
+            "nutrition":300,
+            "price":60,
+            "size":50,
+            "heating":0,
+            "emoji":"🐔"
+        },
+        {
+            "name":"虾(烤熟)",
+            "id":"cooked_shrimp",
+            "nutrition":200,
+            "price":70,
+            "size":30,
+            "heating":0,
+            "emoji":"🦐"
+        },
+        {
+            "name":"豆腐(烤熟)",
+            "id":"cooked_tofu",
+            "nutrition":150,
+            "price":15,
+            "size":40,
+            "heating":0,
+            "emoji":"🧊"
+        },
+        {
+            "name":"蘑菇(烤熟)",
+            "id":"cooked_mushroom",
+            "nutrition":50,
+            "price":20,
+            "size":25,
+            "heating":0,
+            "emoji":"🍄"
+        },
+        {
+            "name":"烤焦的食物",
+            "id":"burned_food",
+            "nutrition":-50,
+            "price":1,
+            "size":30,
+            "heating":0,
+            "emoji":"🔥"
+        }
+    ],
+    "tools":[
+        {
+            "name":"碗",
+            "id":"bowl",
+            "price":50,
+            "fire":-1,
+            "capacity":1000,
+            "emoji":"🥣"
+        },
+        {
+            "name":"平底锅",
+            "id":"pan",
+            "price":50,
+            "fire":3,
+            "capacity":1000,
+            "emoji":"🍳"
+        },
+        {
+            "name": "炒勺",
+            "id": "wok",
+            "price": 60,
+            "fire": -1,
+            "capacity": 120,
+            "emoji":"🥘"
+        },
+        {
+            "name": "铲子",
+            "id": "spatula",
+            "price": 20,
+            "fire": -1,
+            "capacity": 50,
+            "emoji":"🥄"
+        },
+        {
+            "name": "砂锅",
+            "id": "casserole",
+            "price": 80,
+            "fire": 4,
+            "capacity": 1500,
+            "emoji":"🥣"
+        },
+        {
+            "name": "高压锅",
+            "id": "pressure_cooker",
+            "price": 150,
+            "fire": 8,
+            "capacity": 3000,
+            "emoji":"🥘"
+        },
+        {
+            "name": "蒸笼",
+            "id": "steamer",
+            "price": 40,
+            "fire": 2,
+            "capacity": 800,
+            "emoji":"🧊"
+        },
+        {
+            "name": "榨汁机",
+            "id": "juicer",
+            "price": 40,
+            "fire": -1,
+            "capacity": 800,
+            "emoji":"⛽️"
+        },
+        {
+            "name": "研磨机",
+            "id": "grinder",
+            "price": 40,
+            "fire": -1,
+            "capacity": 800,
+            "emoji":"🫕"
+        },
+        {
+            "name": "菜板",
+            "id": "cutting_board",
+            "price": 40,
+            "fire": -1,
+            "capacity": 114514,
+            "emoji": "🔪"
+        },
+        {
+            "name": "菜刀",
+            "id": "knife",
+            "price": 30,
+            "fire": -1,
+            "capacity": 100,
+            "emoji": "🔪"
+        },
+        {
+            "name": "盘子",
+            "id": "plate",
+            "price": 25,
+            "fire": -1,
+            "capacity": 500,
+            "emoji": "🍽️"
+        },
+        {
+            "name": "筷子",
+            "id": "chopsticks",
+            "price": 10,
+            "fire": -1,
+            "capacity": 20,
+            "emoji": "🥢"
+        },
+        {
+            "name": "锅",
+            "id": "pot",
+            "price": 100,
+            "fire": 5,
+            "capacity": 2000,
+            "emoji": "🥘"
+        },
+        {
+            "name": "蒸锅",
+            "id": "steaming_pot",
+            "price": 80,
+            "fire": 3,
+            "capacity": 1500,
+            "emoji": "🧊"
+        },
+        {
+            "name": "烤箱",
+            "id": "oven",
+            "price": 200,
+            "fire": 10,
+            "capacity": 3000,
+            "emoji": "🔥"
+        }
+    ],
+    "spice":[
+        {
+            "name":"盐",
+            "id":"salt",
+            "price":10,
+            "fire":1,
+            "size":2,
+            "emoji":"🧂"
+        },
+        {
+            "name":"糖",
+            "id":"sugar",
+            "price":15,
+            "fire":1,
+            "size":2,
+            "emoji":"🍬"
+        },
+        {
+            "name":"酱油",
+            "id":"soy_sauce",
+            "price":20,
+            "fire":1,
+            "size":2,
+            "emoji":"🍾"
+        },
+        {
+            "name":"醋",
+            "id":"vinegar",
+            "price":18,
+            "fire":1,
+            "size":2,
+            "emoji":"🍶"
+        },
+        {
+            "name":"料酒",
+            "id":"cooking_wine",
+            "price":25,
+            "fire":1,
+            "size":2,
+            "emoji":"🍶"
+        },
+        {
+            "name":"胡椒",
+            "id":"pepper",
+            "price":25,
+            "fire":1,
+            "size":2,
+            "emoji":"🌶️"
+        },
+        {
+            "name":"胡椒粉",
+            "id":"pepper_powder",
+            "price":25,
+            "fire":1,
+            "size":2,
+            "emoji":"🌶️"
+        },
+        {
+            "name":"食用油",
+            "id":"oil",
+            "price":25,
+            "fire":1,
+            "size":2,
+            "emoji":"🫒"
+        },
+        {
+            "name":"山奈",
+            "id":"man_nay",
+            "price":25,
+            "fire":1,
+            "size":2,
+            "emoji":"🌿"
+        },
+        {
+            "name":"栀子黄",
+            "id":"cessian_yellow",
+            "price":25,
+            "fire":1,
+            "size":2,
+            "emoji":"🍋"
+        },
+        {
+            "name":"八角",
+            "id":"eight_spice",
+            "price":25,
+            "fire":1,
+            "size":2,
+            "emoji":"🌟"
+        },
+        {
+            "name":"香叶",
+            "id":"shaf",
+            "price":25,
+            "fire":1,
+            "size":2,
+            "emoji":"🍃"
+        },
+        {
+            "name":"味精",
+            "id":"msg",
+            "price":25,
+            "fire":1,
+            "size":2,
+            "emoji":"✨"
+        },
+        {
+            "name":"盐焗鸡粉",
+            "id":"salt_nerol_cessian",
+            "price":25,
+            "fire":1,
+            "size":2,
+            "emoji":"🧂"
+        },
+        {
+            "name":"老抽",
+            "id":"red_sauce",
+            "price":25,
+            "fire":1,
+            "size":2,
+            "emoji":"🍾"
+        },
+        {
+            "name":"蜂蜜",
+            "id":"honey",
+            "price":25,
+            "fire":1,
+            "size":2,
+            "emoji":"🍯"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "主线剧情":{
+        "picture":"kitchen.png",
+        "required_health": 0,
+        "stages":[
+            "stage1",
+            "stage2",
+            "stage3",
+            "stage4",
+            "stage5"
+        ]
+    },
+    "关东豪飨":{
+        "picture":"dongbei.jpg",
+        "required_health": 200,
+        "stages":[
+            "dongbei1"
+        ]
+    },
+    "粤馔精工":{
+        "picture":"yue.jpeg",
+        "required_health": 400,
+        "stages":[]
+    },
+    "浙韵风雅":{
+        "picture":"zhe.jpg",
+        "required_health": 400,
+        "stages":[]
+    }
+}

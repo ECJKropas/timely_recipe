@@ -1,0 +1,87 @@
+{
+    "stageId": 1034,
+    "stageName": "菠萝咕咾肉",
+    "description": "在这一关中，你将学习如何制作一份简单的菠萝咕咾肉,并深度了解游戏的烹饪系统。",
+    "goals": [
+        "学会多步合成一道菜",
+        "成功制作一份简单的菠萝咕咾肉",
+        "在规定时间内完成烹饪"
+    ],
+    "ingredients": [
+        {
+            "name": "猪里脊",
+            "quantity": 5
+        },
+        {
+            "name": "盐",
+            "quantity": "足量"
+        },
+        {
+            "name": "食用油",
+            "quantity": "足量"
+        },
+        {
+            "name": "胡椒粉",
+            "quantity": "适量"
+        },
+        {
+            "name": "料酒",
+            "quantity": "足量"
+        },
+        {
+            "name": "酱油",
+            "quantity": 2
+        },
+        {   
+            "name": "鸡蛋",
+            "quantity": 2
+        },
+        {
+            "name": "菠萝",
+            "quantity": 2
+        },
+        {
+            "name": "彩椒",
+            "quantity": 4
+        },
+        {
+            "name": "糖",
+            "quantity": "足量"
+        },
+        {
+            "name": "醋",
+            "quantity": "适量"
+        },
+        {
+            "name": "淀粉",
+            "quantity": "足量"
+        },
+        {
+            "name": "蕃茄酱",
+            "quantity": "适量"
+        }
+    ],
+    "tools": [
+        "平底锅",
+        "蒸笼",
+        "榨汁机",
+        "碗"
+    ],
+    "timeLimit": 600,
+    "targets":[
+        "菠萝咕咾肉"
+    ],
+    "reward": {
+        "coins": 150,
+        "recipeBook": ["上盐焗鸡粉的鸭腿"]
+    },
+    "predialog":[
+        {
+            "character":"jessie",
+            "name":"Jessie",
+            "content":"点击右上角的食谱,查看如何做菠萝咕咾肉"
+        }
+    ],
+    "args":[],
+    "kwargs":{}
+}

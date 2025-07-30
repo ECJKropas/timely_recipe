@@ -1,0 +1,22 @@
+{
+  "name": "timely_recipe",
+  "version": "0.1.0",
+  "description": "A web game designed for the elder",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "confetti-js": "^0.0.18",
+    "d3": "^7.9.0",
+    "fabric": "^6.7.1",
+    "p5": "^2.0.3",
+    "textillate": "github:jschr/textillate",
+    "typed.js": "^2.1.0"
+  }
+}

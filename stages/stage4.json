@@ -1,0 +1,53 @@
+{
+    "stageId": 1035,
+    "stageName": "西红柿炒蛋",
+    "description": "在这一关中，你将学习如何自己找出制作西红柿炒蛋的方法。",
+    "goals": [
+        "成功制作一份简单的西红柿炒蛋",
+        "在规定时间内完成烹饪"
+    ],
+    "ingredients": [
+        {
+            "name": "鸡蛋",
+            "quantity": 2
+        },
+        {
+            "name": "盐",
+            "quantity": "适量"
+        },
+        {
+            "name": "食用油",
+            "quantity": "适量"
+        },
+        {
+            "name": "西红柿",
+            "quantity": 500
+        }
+    ],
+    "tools": [
+        "平底锅",
+        "铲子"
+    ],
+    "timeLimit": 60,
+    "targets":[
+        "西红柿炒鸡蛋"
+    ],
+    "reward": {
+        "coins": 50,
+        "recipeBook": ["蒸制的上盐焗鸡粉的鸭腿", "香酥鸭酱料", "预制香酥鸭"]
+    },
+    "predialog":[
+        {
+            "character":"jessie",
+            "name":"Jessie",
+            "content":"欢迎来到时光菜谱的第四关！在这一关中，你将学习如何自己找出制作西红柿炒蛋的方法。"
+        },
+        {
+            "character":"jessie",
+            "name":"Jessie",
+            "content":"在这一关中,部分菜谱缺失,你需要自己摸索出制作方法。"
+        }
+    ],
+    "args":[],
+    "kwargs":{}
+}

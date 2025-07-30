@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时光菜谱 - 关卡选择</title>
+    <link rel="stylesheet" href="level_select.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">选择菜系</h1>
+            <p class="subtitle">探索不同的烹饪世界</p>
+        </header>
+        
+        <main class="categories-container" id="categories-container">
+            <!-- 动态生成的分类卡片 -->
+        </main>
+        
+        <footer class="footer">
+            <button class="back-btn" onclick="goBack()">返回首页</button>
+        </footer>
+    </div>
+
+    <!-- 关卡选择模态框 -->
+    <div class="stage-modal" id="stage-modal" style="display: none;">
+        <div class="stage-modal-content">
+            <div class="stage-modal-header">
+                <h2 id="modal-title">选择关卡</h2>
+                <button class="close-btn" id="close-modal">&times;</button>
+            </div>
+            <div class="stage-grid" id="stage-grid">
+                <!-- 动态生成关卡按钮 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="level_select.js"></script>
+</body>
+</html>

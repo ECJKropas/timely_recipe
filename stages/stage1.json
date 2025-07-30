@@ -1,0 +1,49 @@
+{
+    "stageId": 1032,
+    "stageName": "新手入门",
+    "description": "欢迎来到时光菜谱的第一关！在这一关中，你将学习最基础的烹饪技巧。",
+    "goals": [
+        "成功制作一份简单的烤鸡蛋",
+        "在规定时间内完成烹饪"
+    ],
+    "ingredients": [
+        {
+            "name": "鸡蛋",
+            "quantity": 2
+        },
+        {
+            "name": "盐",
+            "quantity": "适量"
+        },
+        {
+            "name": "食用油",
+            "quantity": "适量"
+        }
+    ],
+    "tools": [
+        "平底锅",
+        "铲子"
+    ],
+    "timeLimit": 40,
+    "targets":[
+        "鸡蛋(烤熟)"
+    ],
+    "reward": {
+        "coins": 50,
+        "recipeBook": ["煎蛋", "清蒸鱼"]
+    },
+    "predialog":[
+        {
+            "character":"jessie",
+            "name":"Jessie",
+            "content":"欢迎来到时光菜谱的第一关！在这一关中，你将学习最基础的烹饪技巧。"
+        },
+        {
+            "character":"jessie",
+            "name":"Jessie",
+            "content":"将鸡蛋卡片拖动进平底锅中,即可开始烤制"
+        }
+    ],
+    "args":[],
+    "kwargs":{}
+}

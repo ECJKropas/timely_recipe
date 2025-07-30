@@ -1,0 +1,72 @@
+{
+    "stageId": 1033,
+    "stageName": "清蒸鱼",
+    "description": "在这一关中，你将学习如何制作一份简单的清蒸鱼,并深度了解游戏的烹饪系统。",
+    "goals": [
+        "了解菜谱的使用方法",
+        "成功制作一份简单的清蒸鱼",
+        "在规定时间内完成烹饪"
+    ],
+    "ingredients": [
+        {
+            "name": "鲫鱼",
+            "quantity": 2
+        },
+        {
+            "name": "盐",
+            "quantity": "适量"
+        },
+        {
+            "name": "食用油",
+            "quantity": "适量"
+        },
+        {
+            "name": "味精",
+            "quantity": "适量"
+        },
+        {
+            "name": "料酒",
+            "quantity": "足量"
+        },
+        {
+            "name": "酱油",
+            "quantity": 2
+        }
+    ],
+    "tools": [
+        "平底锅",
+        "蒸笼"
+    ],
+    "timeLimit": 120,
+    "targets":[
+        "清蒸鱼"
+    ],
+    "reward": {
+        "coins": 150,
+        "recipeBook": ["腌制里脊", "上糊的腌制里脊", "炸过的上糊的腌制里脊", "菠萝咕咾肉秘制酱料", "菠萝咕咾肉"]
+    },
+    "predialog":[
+        {
+            "character":"old_li",
+            "name":"老李头",
+            "content":"诶,我钓了条大的"
+        },
+        {
+            "character":"old_li",
+            "name":"老李头",
+            "content":"这么大条鲤鱼,可惜我不会做"
+        },
+        {
+            "character":"old_li",
+            "name":"老李头",
+            "content":"你看看你那本菜谱,看看有没有"   
+        },
+        {
+            "character":"jessie",
+            "name":"Jessie",
+            "content":"点击右上角的食谱,查看如何做清蒸鱼"   
+        }
+    ],
+    "args":[],
+    "kwargs":{}
+}
