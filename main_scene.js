@@ -1,3 +1,8 @@
+// 全局Typed.js容错处理
+if (typeof window !== 'undefined' && !window.Typed) {
+    console.warn('Typed.js未加载，将使用备用文本显示方案');
+}
+
 // 游戏状态管理
 class GameState {
     constructor() {
@@ -589,7 +594,7 @@ class GameManager {
                 dialogContent.textContent = '';
                 
                 // 检查Typed是否可用
-                const TypedConstructor = window.Typed || Typed;
+                const TypedConstructor = typeof window !== 'undefined' && window.Typed ? window.Typed : (typeof Typed !== 'undefined' ? Typed : undefined);
                 if (typeof TypedConstructor === 'undefined') {
                     // 如果Typed.js不可用，直接显示文本
                     dialogContent.textContent = dialog.content;

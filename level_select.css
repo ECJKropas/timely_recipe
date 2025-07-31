@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Microsoft YaHei', Arial, sans-serif;
-    background-image: url('../assets/kitchenbg.png');
+    background-image: url('assets/kitchenbg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
