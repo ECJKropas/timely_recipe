@@ -574,6 +574,12 @@ class GameManager {
         return new Promise((resolve) => {
             const showCurrentDialog = () => {
                 if (currentDialogIndex >= stage.predialog.length) {
+                    // 清理事件监听器
+                    dialogLayer.removeEventListener('click', nextDialog);
+                    document.removeEventListener('keydown', handleKeyPress);
+                    if (typedInstance && typeof typedInstance.destroy === 'function') {
+                        typedInstance.destroy();
+                    }
                     dialogLayer.style.display = 'none';
                     resolve();
                     return;
@@ -582,8 +588,10 @@ class GameManager {
                 const dialog = stage.predialog[currentDialogIndex];
                 characterName.textContent = dialog.name;
                 characterImage.src = `assets/characters/${dialog.character}.png`;
+                
+                // 确保对话框可见后再设置内容
                 dialogLayer.style.display = 'flex';
-
+                
                 // 清除之前的打字机实例
                 if (typedInstance) {
                     typedInstance.destroy();
@@ -597,8 +605,10 @@ class GameManager {
                 const TypedConstructor = typeof window !== 'undefined' && window.Typed ? window.Typed : (typeof Typed !== 'undefined' ? Typed : undefined);
                 if (typeof TypedConstructor === 'undefined') {
                     // 如果Typed.js不可用，直接显示文本
-                    dialogContent.textContent = dialog.content;
-                    isTyping = false;
+                    setTimeout(() => {
+                        dialogContent.textContent = dialog.content;
+                        isTyping = false;
+                    }, 100);
                 } else {
                     typedInstance = new TypedConstructor(dialogContent, {
                         strings: [dialog.content],
@@ -640,28 +650,12 @@ class GameManager {
             };
             document.addEventListener('keydown', handleKeyPress);
 
-            // 清理事件监听器
-            const cleanup = () => {
-                dialogLayer.removeEventListener('click', nextDialog);
-                document.removeEventListener('keydown', handleKeyPress);
-                if (typedInstance && typeof typedInstance.destroy === 'function') {
-                    typedInstance.destroy();
-                }
-            };
 
-            // 在对话结束时清理事件监听器
-            const originalShowCurrentDialog = showCurrentDialog;
-            const showCurrentDialogWithCleanup = () => {
-                if (currentDialogIndex >= stage.predialog.length) {
-                    cleanup();
-                    originalShowCurrentDialog();
-                    return;
-                }
-                originalShowCurrentDialog();
-            };
+
+
 
             // 显示第一个对话
-            showCurrentDialogWithCleanup();
+            showCurrentDialog();
         });
     }
 
