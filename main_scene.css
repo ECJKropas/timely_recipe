@@ -818,16 +818,38 @@ body {
 /* 响应式设计 */
 @media (max-width: 1200px) {
     .game-main {
-        flex-direction: column;
+        flex-direction: row;
     }
     
     .kitchen-area {
-        height: 300px;
+        flex: 1;
+        min-width: 200px;
+        height: auto;
     }
     
     .game-interface {
-        width: 100%;
-        max-height: calc(100vh - 300px - 80px);
+        width: 450px;
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .kitchen-area {
+        min-width: 150px;
+    }
+    
+    .game-interface {
+        width: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    .kitchen-area {
+        min-width: 100px;
+    }
+    
+    .game-interface {
+        width: 300px;
     }
 }
 

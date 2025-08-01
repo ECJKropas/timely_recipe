@@ -115,16 +115,8 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/dist/typed.umd.js"></script>
-    <script>
-        // Typed.js CDN加载失败的备用方案 - 直接显示文字
-        if (typeof Typed === 'undefined') {
-            console.warn('CDN加载失败，将直接显示文字');
-            // 不再尝试加载本地文件，直接让window.Typed保持未定义状态
-            // 主场景中的容错代码会处理这种情况
-        }
-    </script>
+    <script src="./node_modules/confetti-js/dist/index.min.js"></script>
+    <script src="./node_modules/typed.js/dist/typed.umd.js"></script>
     <script src="main_scene.js"></script>
 </body>
 </html>
